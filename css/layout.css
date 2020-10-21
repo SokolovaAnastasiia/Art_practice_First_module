@@ -6,7 +6,6 @@
 
 body {
     width: 1280px;
-    border: 1px dotted black;
     position: relative;
     color: var(--black);
 }
@@ -26,6 +25,7 @@ h2 {
     font-weight: bold;
     font-size: 36px;
     line-height: 95%;
+    margin-bottom: 30px
 }
 
 h3 {
@@ -34,6 +34,7 @@ h3 {
     font-weight: bold;
     font-size: 24px;
     line-height: 29px;
+    margin-bottom: 70px;
 }
 
 p {
@@ -44,15 +45,61 @@ p {
     line-height: 130%;
 }
 
-h2+h3 {
-    margin-top: 15px;
-    margin-bottom: 85px;
+.sidebar {
+    /* opacity: 0; */
+    display: none;
+    position: fixed;
+    height: 100%;
+    width: 345px;
+    background-color: white;
+    transition: all .3s ease;
+    padding-top: 150px;
+    padding-left: 33px;
+    box-sizing: border-box;
+    z-index: 5;
+}
+
+.sidebar h3 {
+    font-family: Marlene Grande;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 22px;
+    margin-bottom: 15px;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: var(--black);
+}
+
+.sidebar p {
+    margin-left: 20px;
+    margin-bottom: 10px;
+    font-family: Marlene Grande;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 130%;
 }
 
 .logo {
+    cursor: pointer;
     position: fixed;
     top: 10px;
     left: 10px;
+    z-index: 10;
+}
+
+.logo:hover ~ .sidebar {
+    /* opacity: 1; */
+    display: block;
+    transition: all .1s ease-out;
+}
+
+.sidebar:hover {
+    display: block;
+    /* opacity: 1; */
 }
 
 .up_icon {
@@ -113,6 +160,7 @@ h2+h3 {
 
 .block.blue.remember h3 {
     display: inline-block;
+    margin-bottom: 0;
 }
 .block.blue.remember p {
     margin-top: 10px;
@@ -137,8 +185,8 @@ h2+h3 {
 
 
 .block .about p {
-    margin-top: 60px;
     width: 450px;
+    margin-bottom: 45px;
     background-color: var(--white);
 }
 
@@ -146,39 +194,21 @@ h2+h3 {
     background-image: url(../images/rules-background.png);
 }
 
-.cards div {
+.card {
     width: 476px;
-    /* height: 133px; */
-    background-color: white;
+    cursor: pointer;
+    background-image: url(../images/cards-background.svg);
+    background-size: cover;
+    background-position: top left;
+
     box-sizing: border-box;
     padding: 40px;
     margin: 0 auto 95px;
     position: relative;
 }
 
-.circle{
-    display:block;
-    width: 100px;
-    height: 50px;
-    top:-50px;
-    left:0;
-    overflow:hidden;
-    position:absolute;
-}
 
-.circle:after{
-    content:'';
-    width: 100px;
-    height: 100px;
-    border-radius: 100px;
-    background:rgba(0,0,0,0);
-    position:absolute;
-    top:-100px;
-    left:-40px;
-    border:40px solid rgba(0,0,0,0.5);
-}
-
-.cards div p {
+.card p {
     font-family: Marlene Grande;
     font-style: normal;
     font-weight: normal;
@@ -186,6 +216,38 @@ h2+h3 {
     line-height: 130%;
 }
 
+.card div{
+    opacity: 0;
+    width: 340px;
+    border: 2px solid var(--black);
+    box-sizing: border-box;
+    border-radius: 20px;
+    background-image: url(../images/description-background.svg);
+    background-size: cover;
+    background-position: top right;
+    position: absolute;
+    top: 0;
+    left: -370px;
+    padding: 25px 50px 25px 25px;
+    transition: all .3s ease;
+}
+
+.card div span {
+    position: absolute;
+    top: 10px;
+    right: 19px;
+    font-family: Marlene Grande;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 130%;
+}
+
+
+.card:hover > div {
+    opacity: 1;
+    transition: all .1s ease-out;
+}
 .number {
     position: absolute;
     right: 15px;
@@ -215,7 +277,7 @@ h2+h3 {
 .advises-containter div::after {
     content: url(../images/cross.svg);
     position: absolute;
-    right: -10px;
+    left: -10px;
     top: -10px;
 }
 
@@ -243,6 +305,12 @@ h2+h3 {
     justify-content: center;
     box-sizing: border-box;
     padding: 35px;
+    transition: all .5s ease-out;
+}
+
+.week div:hover {
+    background-color: var(--blue);
+    transition: all .1s ease-out;
 }
 
 .week div span {
@@ -262,4 +330,36 @@ h2+h3 {
     font-weight: 500;
     font-size: 18px;
     line-height: 130%;
+}
+
+.reviews {
+    background-image: url(../images/reviews-background.svg);
+}
+
+.reviews div{
+    width: 635px;
+    box-sizing: border-box;
+    background-color: var(--blue);
+    padding: 45px;
+    margin-bottom: 25px;
+}
+
+.reviews div span {
+    display: inline-block;
+    margin-bottom: 25px;
+    font-family: Marlene Grande;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 130%;
+}
+.footer {
+    display: flex;
+    justify-content: space-between;
+    z-index: -1;
+}
+
+.footer h3 {
+    display: block;
+    margin-bottom: 0;
 }
