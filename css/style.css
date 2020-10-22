@@ -1,2 +1,8 @@
 @import 'reset.css';
 @import 'layout.css';
+
+@font-face {
+    font-family: Marlene;
+    src: url(../fonts/Marlene-BoldItalic.ttf);
+    font-style: BoldItalic;
+}
