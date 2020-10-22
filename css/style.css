@@ -3,6 +3,5 @@
 
 @font-face {
     font-family: Marlene;
-    src: url(../fonts/Marlene-BoldItalic.ttf);
-    font-style: BoldItalic;
+    src: url(../fonts/Marlene-BoldItalic.ttf) format ('ttf');
 }
