@@ -7,3 +7,31 @@
     font-style: italic;
     font-weight: bold;
 }
+
+@font-face {
+    font-family: "Marlene Grande";
+    src: url("../fonts/MarleneGrande-BoldItalic.ttf");
+    font-style: italic;
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "Marlene Grande";
+    src: url("../fonts/MarleneGrande-Bold.ttf");
+    font-style: normal;
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "Marlene Grande";
+    src: url("../fonts/MarleneGrande-Medium.ttf");
+    font-style: normal;
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "Marlene Grande";
+    src: url("../fonts/MarleneGrande-Regular.ttf");
+    font-style: normal;
+    font-weight: normal;
+}
