@@ -8,11 +8,13 @@ body {
     width: 1280px;
     position: relative;
     color: var(--black);
+    /* font-family: "Marlene"; */
 }
 
 
 h1 {
     font-family: Marlene;
+    font-family: "Marlene";
     font-style: italic;
     font-weight: bold;
     font-size: 44px;
